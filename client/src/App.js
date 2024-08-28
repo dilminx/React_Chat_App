@@ -15,24 +15,26 @@ const App = () => {
   }
   return (
     <div>
-      <h3>join chat</h3>
-      <input
+       <div>
+      <h3 className="p-4 font-bold">Join chat</h3>
+      <input className="p-1 m-1 border border-black"
         type="text"
         placeholder="Name..."
         onChange={(e) => {
           setUserName(e.target.value);
         }}
       ></input>
-      <input
+      <input className="p-1 m-1 border border-black"
         type="text"
         placeholder="Room..."
         onChange={(e) => {
           setRoom(e.target.value);
         }}
       ></input>
-      <button onClick={joinRoom}>click</button>
-      <Chat socket={socket } userName={userName} room={room} />
+      <button className="w-16 p-1 m-1 bg-red-400 border rounded-lg shadow-xl" onClick={joinRoom}>click</button>
     </div>
+      <Chat socket={socket } userName={userName} room={room} />
+   </div>
   );
 };
 

@@ -27,8 +27,8 @@ const Chat = ({ socket, userName, room }) => {
     return (
         <div className="flex flex-col items-center h-screen bg-gray-100">
             <div className="w-full max-w-xl">
-                <div className="flex items-center justify-between p-4 bg-blue-500 text-white">
-                    <h1 className="text-lg font-semibold">Live Chat</h1>
+                <div className="flex items-center justify-between p-4 m-2 text-white bg-blue-500 rounded-lg">
+                    <h1 className="text-lg font-semibold ">Live Chat</h1>
                     <span className="text-sm">{userName}</span>
                 </div>
                 <div className="flex-grow p-4 space-y-4 overflow-y-auto bg-white border border-gray-300 rounded-lg shadow-inner max-h-[70vh]">
@@ -56,7 +56,7 @@ const Chat = ({ socket, userName, room }) => {
                         onChange={(e) => setCurrentMsg(e.target.value)}
                     />
                     <button
-                        className="px-4 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600"
+                        className="px-4 py-2 text-white bg-blue-500 rounded-r-lg hover:bg-blue-600"
                         onClick={sendMsg}
                     >
                         &#9658;
